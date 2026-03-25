@@ -1,0 +1,1 @@
+{\n  "version": 2,\n  "builds": [\n    {\n      "src": "index.html",\n      "use": "@vercel/static"\n    }\n  ],\n  "routes": [\n    {\n      "src": "/(.*)",\n      "headers": {\n        "Cache-Control": "max-age=3600, s-maxage=3600, stale-while-revalidate=59"\n      },\n      "dest": "/$1"\n    }\n  ],\n  "cleanURLs": true,\n  "trailingSlash": false\n}
